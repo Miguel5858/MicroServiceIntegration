@@ -1,0 +1,28 @@
+
+services:
+  app:
+    build: .
+    depends_on:
+      - database-mysql
+    ports:
+      - "4000:4000"  # Exponer la aplicación Flask en el puerto 
+
+  database-mysql:
+    image: mysql:8.0.26
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: saleQueuedb
+    ports:
+      - "3308:3306"  # MySQL estará disponible en el puerto 3308 en el host
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - netappdistri
+
+networks:
+  netappdistri:
+    driver: bridge
+
+volumes:
+  mysql_data:

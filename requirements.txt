@@ -1,0 +1,6 @@
+Flask==2.0.3
+SQLAlchemy==1.4.22
+pymysql==1.0.2
+pika==1.2.0
+Werkzeug==2.0.3  # Agrega esta línea para asegurar compatibilidad
+cryptography
