@@ -1,3 +1,14 @@
+# Dockerización de la Aplicación Flask
+
+Este documento proporciona una guía paso a paso para dockerizar una aplicación Flask que consume mensajes de RabbitMQ y utiliza MySQL como base de datos.
+
+## Prerrequisitos
+
+Antes de comenzar, asegúrate de tener instalado en tu máquina:
+
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/)
+
 
 ## Paso 1: Crear el `Dockerfile`
 
@@ -41,3 +52,6 @@
 
    # Comando para ejecutar la aplicación
    CMD ["python", "consumer.py"]
+   
+8. **docker-compose up --build
+
